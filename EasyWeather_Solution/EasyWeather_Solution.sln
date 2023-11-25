@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeather.Android", "EasyWeather\EasyWeather.Android\EasyWeather.Android.csproj", "{B8CC2282-3859-43A5-8F8F-049C249E509F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeather", "EasyWeather\EasyWeather\EasyWeather.csproj", "{A98C0854-F367-4849-987C-8348D282F54C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CC2282-3859-43A5-8F8F-049C249E509F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98C0854-F367-4849-987C-8348D282F54C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD0E835F-4315-4CDA-8DD1-0A3D7C108917}
+	EndGlobalSection
+EndGlobal

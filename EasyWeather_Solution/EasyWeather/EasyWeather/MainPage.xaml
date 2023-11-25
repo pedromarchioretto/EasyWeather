@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyWeather.MainPage">
+
+    <StackLayout>
+        <AbsoluteLayout>
+            <Image Source="Neutral.png" Aspect="AspectFill"
+           AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+           AbsoluteLayout.LayoutFlags="All" />
+
+            <Image Source="Lupa.png"
+           AbsoluteLayout.LayoutBounds="0, 0, 77, 77"
+           AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            <Image Source="Sandwich_bar.png"
+           AbsoluteLayout.LayoutBounds=" 1, 0, 86, 86"
+           AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            <Frame CornerRadius="20" Padding="10" BackgroundColor="black"
+                AbsoluteLayout.LayoutBounds=" 0.5, 0.46, 380, 86"
+                AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <Label Text="Clique na Lupa e escolha a localização de sua preferência! :)" 
+                       TextColor="white" HorizontalOptions="Center" VerticalOptions="Center"
+                       FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="20"/>
+            </Frame>
+
+        </AbsoluteLayout>
+    </StackLayout>
+
+</ContentPage>
