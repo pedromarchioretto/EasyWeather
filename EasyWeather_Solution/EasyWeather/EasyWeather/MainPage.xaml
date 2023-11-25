@@ -1,31 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasyWeather.MainPage">
+             x:Class="EasyWeather.MainPage" Opacity="30" Padding="5">
 
-    <StackLayout>
-        <AbsoluteLayout>
-            <Image Source="Neutral.png" Aspect="AspectFill"
-           AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-           AbsoluteLayout.LayoutFlags="All" />
 
-            <Image Source="Lupa.png"
-           AbsoluteLayout.LayoutBounds="0, 0, 77, 77"
-           AbsoluteLayout.LayoutFlags="PositionProportional" />
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Frame CornerRadius="10" BackgroundColor="White" Padding="0" WidthRequest="10" HeightRequest="40" Margin=" 20, 20, 20, 0">
+                    <SearchBar Placeholder="Digite a localização" 
+                        VerticalOptions="StartAndExpand" Margin=" -10, 3, 0, 0"
+                        PlaceholderColor="black" 
+                        TextColor="Black"
+                        BackgroundColor="white"
+                        FontSize="17"
+                        FontFamily="Nunito-ExtraLight.ttf#Nunito" />
+                </Frame>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
 
-            <Image Source="Sandwich_bar.png"
-           AbsoluteLayout.LayoutBounds=" 1, 0, 86, 86"
-           AbsoluteLayout.LayoutFlags="PositionProportional" />
+    <FlyoutPage.Detail>
+        <ContentPage Title="tela">
+            <StackLayout>
+                <AbsoluteLayout>
+                    <Image Source="Neutral.png" Aspect="AspectFill"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        AbsoluteLayout.LayoutFlags="All" />
 
-            <Frame CornerRadius="20" Padding="10" BackgroundColor="black"
-                AbsoluteLayout.LayoutBounds=" 0.5, 0.46, 380, 86"
-                AbsoluteLayout.LayoutFlags="PositionProportional" >
-                <Label Text="Clique na Lupa e escolha a localização de sua preferência! :)" 
-                       TextColor="white" HorizontalOptions="Center" VerticalOptions="Center"
-                       FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="20"/>
-            </Frame>
+                    <Image Source="Lupa.png"
+                        AbsoluteLayout.LayoutBounds=" 0, 0, 86, 86"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
 
-        </AbsoluteLayout>
-    </StackLayout>
+                    <Image Source="Sandwich_bar.png"
+                        AbsoluteLayout.LayoutBounds=" 1, 0, 86, 86"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-</ContentPage>
+                    <Frame CornerRadius="20" Padding="10" BackgroundColor="black"
+                        AbsoluteLayout.LayoutBounds=" 0.5, 0.46, 380, 86"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" >
+                        <Label Text="Clique na Lupa e escolha a localização de sua preferência! :)" 
+                            TextColor="white" HorizontalOptions="Center" VerticalOptions="Center"
+                            FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="20"/>    
+                    </Frame>
+
+                </AbsoluteLayout>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>
