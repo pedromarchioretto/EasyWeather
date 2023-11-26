@@ -639,3 +639,4 @@ C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather.Android
 C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather.Android\obj\Debug\130\android\assets\Newtonsoft.Json.dll

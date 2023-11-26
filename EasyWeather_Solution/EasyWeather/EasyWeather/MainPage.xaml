@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasyWeather.MainPage" Opacity="30" Padding="5">
+             x:Class="EasyWeather.MainPage" Padding="5" Opacity="400" BackgroundColor="#363636">
 
 
     <FlyoutPage.Flyout>
-        <ContentPage Title="Menu">
+        <ContentPage Title="Menu" Opacity="0.94">
             <StackLayout>
                 <Frame CornerRadius="10" BackgroundColor="White" Padding="0" WidthRequest="10" HeightRequest="40" Margin=" 20, 20, 20, 0">
                     <SearchBar Placeholder="Digite a localização" 
@@ -14,8 +14,12 @@
                         TextColor="Black"
                         BackgroundColor="white"
                         FontSize="17"
-                        FontFamily="Nunito-ExtraLight.ttf#Nunito" />
+                        FontFamily="Nunito-ExtraLight.ttf#Nunito" 
+                        SearchButtonPressed="Pesquisar_Cidade" />
                 </Frame>
+
+                <Label Text="{Binding erros}" TextColor="white" Padding="30, 280, 30, 0" />
+
             </StackLayout>
         </ContentPage>
     </FlyoutPage.Flyout>
