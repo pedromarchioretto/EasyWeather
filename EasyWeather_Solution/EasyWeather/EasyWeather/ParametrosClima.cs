@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace EasyWeather
 {
-    public class ParametrosClima
+    public class ParametrosClima : INotifyPropertyChanged
     {
-        public string erros {  get; set; }
+        public string erros { get; set; }
         public MainData Main { get; set; }
         public WeatherData[] Weather { get; set; }
         public WindData Wind { get; set; }
         public string Name { get; set; }
-        public SysData Sys { get; set; }
-        public float Visibility { get; set; }
+        public SysData Sys { get; set; }       
+        public float Visibility {get; set; }
+        public string localizacao {  get; set; }
+
 
         public class MainData
         {
@@ -30,13 +33,30 @@ namespace EasyWeather
 
         public class WindData
         {
-            public float Speed { get; set; }
+            private float speed;
+
+            public float Speed
+            {
+                get { return speed * 3.6f; }
+                set { speed = value; }
+            }
         }
 
         public class SysData
         {
             public string Country { get; set; }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged()
+        {
+            foreach (var property in GetType().GetProperties())
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property.Name));
+            }
+        }
+
     }
 
 }

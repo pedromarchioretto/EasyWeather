@@ -17,7 +17,7 @@ namespace EasyWeather
         public MainPage()
         { 
             excecoes = new ParametrosClima();
-            excecoes.erros = "";
+            excecoes.erros = "teste";
             BindingContext = excecoes;
             
             InitializeComponent();
@@ -49,26 +49,30 @@ namespace EasyWeather
         {
             try
             {
-                string APIUrl = String.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&lang=pt_br", cidade, ChaveAPI);
+                string APIUrl = String.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&lang=pt_br&units=metric", cidade, ChaveAPI);
                 HttpResponseMessage response = await _client.GetAsync(APIUrl);
                 if (response.IsSuccessStatusCode)
                 {
                     string json = await response.Content.ReadAsStringAsync();
 
                     // Deserializa o JSON para um objeto
-                    ParametrosClima objeto = JsonConvert.DeserializeObject<ParametrosClima>(json);
-                    DisplayAlert("Título", objeto.Weather[0].Description, "OK");
+                    ParametrosClima objeto = new ParametrosClima();
+                    objeto = JsonConvert.DeserializeObject<ParametrosClima>(json);
+
+                    objeto.localizacao = String.Format("{0} - {1}", objeto.Name, objeto.Sys.Country);
+                    BindingContext = objeto;
+
                 }
                 else
                 {
                     excecoes.erros = "Você digitou uma cidade inválida, tente novamente :)";
-                    OnPropertyChanged(nameof(excecoes.erros));
+                    BindingContext = excecoes;
                 }
             }
             catch (Exception ex)
             {
                 excecoes.erros = "Parece que aconteceu algum erro :(, tente novamente mais tarde!";
-                OnPropertyChanged(nameof(excecoes.erros));
+                BindingContext = excecoes;
             }
         }
     }

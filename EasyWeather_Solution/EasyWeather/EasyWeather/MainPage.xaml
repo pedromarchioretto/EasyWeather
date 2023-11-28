@@ -44,12 +44,89 @@
                         AbsoluteLayout.LayoutBounds=" 1, 0, 86, 86"
                         AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-                    <Frame CornerRadius="20" Padding="10" BackgroundColor="black"
+                    <Frame IsVisible="false" CornerRadius="20" Padding="10" BackgroundColor="black"
                         AbsoluteLayout.LayoutBounds=" 0.5, 0.46, 380, 86"
                         AbsoluteLayout.LayoutFlags="PositionProportional" >
                         <Label Text="Clique na Lupa e escolha a localização de sua preferência! :)" 
                             TextColor="white" HorizontalOptions="Center" VerticalOptions="Center"
-                            FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="20"/>    
+                            FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="20"/>
+                    </Frame>
+
+                    <!-- Frame para temperaturas -->
+
+                    <Frame  x:Name="f_Temperatura" CornerRadius="20" BackgroundColor="#80232B38"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.24, 280, 215"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" >
+
+                        <StackLayout>
+                            <Label Text="{Binding Main.Temp, StringFormat='{0:F0}°'}" TextColor="white" FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="60" HorizontalOptions="Center" Padding="0, 10, 0, -10" />
+
+                            <Label Text="{Binding localizacao}" TextColor="white" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="20" HorizontalOptions="Center" Padding="0, -6, 0, 0" />
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label Text="{Binding Main.Temp_min, StringFormat='Mín / {0:F0}°'}" TextColor="white" FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="15" HorizontalOptions="Start" Padding="0, 6, 0, 0" />
+
+                                <Label Text="{Binding Main.Temp_max, StringFormat='Máx / {0:F0}°'}" TextColor="white" FontFamily="Nunito-ExtraLight.ttf#Nunito" FontSize="15" HorizontalOptions="End" Padding=" 98, 6, 0, 0" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    
+                    <!-- Frame para mostrar vento, umidade e visibilidade -->
+                    <Frame  x:Name="f_especificos" CornerRadius="20" Padding="0, 10, 0, 0" BackgroundColor="#80232B38"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.7, 390, 165"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" >
+
+                        <StackLayout HorizontalOptions="Center">
+                            <Label Text="{Binding Weather[0].Description, StringFormat='{0}:'}" TextColor="white" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="25" HorizontalOptions="Center" Padding="0, 10, 0, 10"
+                                    AbsoluteLayout.LayoutBounds="0, 0, 280, 0"
+                                    AbsoluteLayout.LayoutFlags="All" />
+
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="0">
+                                        <Image Source="Water.png" WidthRequest="20" HeightRequest="20" Grid.Column="0" />
+                                        <Label Text="Umidade:" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="1">
+                                        <Image Source="Wind.png" WidthRequest="25" HeightRequest="25" Grid.Column="0" />
+                                        <Label Text="Vento:" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="2">
+                                        <Image Source="Eye.png" WidthRequest="25" HeightRequest="25" Grid.Column="0" />
+                                        <Label Text="Visibilidade:" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+                                </Grid>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="0">
+                                        <Label Text="{Binding Main.Humidity, StringFormat='{0}%'}" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="1">
+                                        <Label Text="{Binding Wind.Speed, StringFormat='{0:0.00} Km/h'}" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="2">
+                                        <Label Text="{Binding Visibility, StringFormat='{0} m'}" FontFamily="Nunito-Regular.ttf#Nunito" FontSize="16" TextColor="white" VerticalOptions="Center" Grid.Column="1" />
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
                     </Frame>
 
                 </AbsoluteLayout>
