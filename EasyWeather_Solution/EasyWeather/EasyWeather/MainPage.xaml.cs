@@ -17,7 +17,7 @@ namespace EasyWeather
         public MainPage()
         { 
             excecoes = new ParametrosClima();
-            excecoes.erros = "teste";
+            excecoes.erros = "";
             BindingContext = excecoes;
             
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace EasyWeather
 
             ChavesAPI chaves = new ChavesAPI();
 
-            ObterDadosDaAPI(searchText, chaves.ChaveAPI);
+            ObterDadosDaAPI(searchText, chaves.OpenWeatherAPI);
         }
 
         async Task ObterDadosDaAPI(string cidade, string ChaveAPI)
@@ -57,9 +57,17 @@ namespace EasyWeather
 
                     // Deserializa o JSON para um objeto
                     ParametrosClima objeto = new ParametrosClima();
-                    objeto = JsonConvert.DeserializeObject<ParametrosClima>(json);
 
+                    objeto = JsonConvert.DeserializeObject<ParametrosClima>(json);
                     objeto.localizacao = String.Format("{0} - {1}", objeto.Name, objeto.Sys.Country);
+
+                    GoogleApi google = new GoogleApi();
+                    Task horario = google.HorarioLocal(objeto.coord.lat, objeto.coord.lon);
+
+                    if (objeto.Weather[0].Description == "céu limpo")
+                    {
+                        objeto.ImagemBackground = "Dia.jpg";
+                    }
                     BindingContext = objeto;
 
                 }

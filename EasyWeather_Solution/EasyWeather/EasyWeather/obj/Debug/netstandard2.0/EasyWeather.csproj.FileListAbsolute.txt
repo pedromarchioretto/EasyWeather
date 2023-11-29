@@ -1,0 +1,15 @@
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\bin\Debug\netstandard2.0\EasyWeather.deps.json
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\bin\Debug\netstandard2.0\EasyWeather.dll
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\bin\Debug\netstandard2.0\ref\EasyWeather.dll
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\bin\Debug\netstandard2.0\EasyWeather.pdb
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.csproj.AssemblyReference.cache
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.AssemblyInfoInputs.cache
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.AssemblyInfo.cs
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.csproj.CoreCompileInputs.cache
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.dll
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\refint\EasyWeather.dll
+C:\Users\paiva\source\repos\EasyWeather_Solution\EasyWeather\EasyWeather\obj\Debug\netstandard2.0\EasyWeather.pdb

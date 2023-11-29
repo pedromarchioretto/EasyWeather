@@ -10,14 +10,21 @@ namespace EasyWeather
         public string erros { get; set; }
         public MainData Main { get; set; }
         public WeatherData[] Weather { get; set; }
+        public Coordenadas coord {  get; set; }
         public WindData Wind { get; set; }
         public string Name { get; set; }
         public SysData Sys { get; set; }       
         public float Visibility {get; set; }
         public string localizacao {  get; set; }
+        public string ImagemBackground { get; set; } = "Neutral.png";
 
 
-        public class MainData
+        public class Coordenadas
+        {
+            public float lon { get; set; }
+            public float lat { get; set; }
+        }
+            public class MainData
         {
             public float Temp { get; set; }
             public float Temp_min { get; set; }

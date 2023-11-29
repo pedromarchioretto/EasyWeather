@@ -28,7 +28,7 @@
         <ContentPage Title="tela">
             <StackLayout>
                 <AbsoluteLayout>
-                    <Image Source="Neutral.png" Aspect="AspectFill"
+                    <Image Source="{Binding ImagemBackground}" Aspect="AspectFill"
                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                         AbsoluteLayout.LayoutFlags="All" />
 
@@ -44,7 +44,7 @@
                         AbsoluteLayout.LayoutBounds=" 1, 0, 86, 86"
                         AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-                    <Frame IsVisible="false" CornerRadius="20" Padding="10" BackgroundColor="black"
+                    <Frame IsVisible="true" CornerRadius="20" Padding="10" BackgroundColor="black"
                         AbsoluteLayout.LayoutBounds=" 0.5, 0.46, 380, 86"
                         AbsoluteLayout.LayoutFlags="PositionProportional" >
                         <Label Text="Clique na Lupa e escolha a localização de sua preferência! :)" 
@@ -54,7 +54,7 @@
 
                     <!-- Frame para temperaturas -->
 
-                    <Frame  x:Name="f_Temperatura" CornerRadius="20" BackgroundColor="#80232B38"
+                    <Frame  x:Name="f_Temperatura" IsVisible="false" CornerRadius="20" BackgroundColor="#80232B38"
                         AbsoluteLayout.LayoutBounds="0.5, 0.24, 280, 215"
                         AbsoluteLayout.LayoutFlags="PositionProportional" >
 
@@ -73,7 +73,7 @@
 
                     
                     <!-- Frame para mostrar vento, umidade e visibilidade -->
-                    <Frame  x:Name="f_especificos" CornerRadius="20" Padding="0, 10, 0, 0" BackgroundColor="#80232B38"
+                    <Frame  x:Name="f_especificos" IsVisible="false" CornerRadius="20" Padding="0, 10, 0, 0" BackgroundColor="#80232B38"
                         AbsoluteLayout.LayoutBounds="0.5, 0.7, 390, 165"
                         AbsoluteLayout.LayoutFlags="PositionProportional" >
 
