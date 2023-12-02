@@ -7,7 +7,6 @@ namespace EasyWeather
     public class ChavesAPI
     {
         public string OpenWeatherAPI = "e38df0bfd785c5270b572678ba37417c";
-
-        public string GoogleAPI = "AIzaSyAnU2wjpjHUsGQZ97fmvh-Mc-8MC--rkc4";
+        public string TimeZoneAPI = "5E55H20JH1CZ";
     }
 }
