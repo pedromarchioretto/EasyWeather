@@ -15,8 +15,11 @@
                         BackgroundColor="white"
                         FontSize="17"
                         FontFamily="Nunito-ExtraLight.ttf#Nunito" 
-                        SearchButtonPressed="Pesquisar_Cidade" />
+                        SearchButtonPressed="Pesquisar_Cidade" 
+                        x:Name="pesquisar" />
                 </Frame>
+
+                <Picker x:Name="meuPicker" Title="Cidades favoritas" SelectedIndexChanged="ItemAlterado" />
 
                 <Label Text="{Binding erros}" TextColor="white" Padding="30, 280, 30, 0" />
 
@@ -148,5 +151,4 @@
             </StackLayout>
         </ContentPage>
     </FlyoutPage.Detail>
-
 </FlyoutPage>
