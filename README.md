@@ -49,7 +49,7 @@ Entre na pasta clonada: `\EasyWeather_Solution\` e abra o arquivo `EasyWeather_S
 ### 2: Mude as API keys
 
 - Entre no site da [OpenWeather](https://openweathermap.org/api) e `crie` sua conta `gratuitamente`
-- Entre no página de [API keys](https://home.openweathermap.org/api_keys) e aperte para `gerar` sua `APIkey`
+- Entre na página de [API keys](https://home.openweathermap.org/api_keys) e aperte para `gerar` sua `APIkey` da OpenWeather
 - Realize o mesmo processo para o site [TimeZoneDB](https://timezonedb.com/api) e pegue `APIkey`
 - Dentro do código, procure pela classe `ChavesAPI.cs` e troque os valores:
 ~~~
