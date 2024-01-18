@@ -1,6 +1,6 @@
 # EasyWeather 
 
-Este é um aplicativo mobile feito para mostrar dados de tempo e clima de qualquer cidade do mundo. Exclusivo para dispositivos `Android`!
+Este é um aplicativo mobile feito em Xamarin para mostrar dados de tempo e clima de qualquer cidade do mundo. Exclusivo para dispositivos `Android`!
 
 ## Informações disponibilizadas
 - País em que a cidade pesquisada se localiza
