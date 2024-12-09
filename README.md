@@ -74,9 +74,6 @@ Você pode escolher executar o aplicativo em um emulador (`No próprio visual st
 6. Retorne ao `Visual Studio` e conecte seu celular por `USB` no computador. Ao lado do botão de execução do código, no topo da tela, você poderá ver o nome do seu dispositivo, `clique para executar` para iniciar a compilação (`isso pode demorar`) e aguarde o aplicativo se iniciar :) Aproveite !
 
 
-#### Caso você, `desenvolvedor`, encontre um erro ou queira complementar e melhorar o projeto, não hesite em fazer um pull request! 😊
-
-
 
 
 
